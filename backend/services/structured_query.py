@@ -189,7 +189,7 @@ class StructuredQueryService:
             for d in deps:
                 result += f"  - قسم: {d.name_ar} ({d.name_en})\n"
             # Get programs
-            progs = self.db.query(Program).filter(Program.faculty_id == f.id).all()
+            progs = self.db.query(Program).join(Department).filter(Department.faculty_id == f.id).all()
             for p in progs:
                 result += f"  - برنامج: {p.name_ar} ({p.degree_type}) - {p.duration_years} سنوات\n"
         return result
