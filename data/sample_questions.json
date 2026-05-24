@@ -1,0 +1,22 @@
+[
+    {"question": "متى تأسست جامعة العلوم والتقانة؟", "expected_answer": "مارس 1995", "category": "general"},
+    {"question": "ما هي كليات الجامعة؟", "expected_answer": "الطب، طب الأسنان، الصيدلة، المختبرات، التمريض، الهندسة، الحاسوب، الإدارية", "category": "faculties"},
+    {"question": "ما هي شروط القبول؟", "expected_answer": "استيفاء شروط المجلس القومي + اختبار قبول/مقابلة + شروط الكلية", "category": "admission"},
+    {"question": "أين تقع الجامعة؟", "expected_answer": "أم درمان، السودان", "category": "general"},
+    {"question": "ما هي رؤية الجامعة؟", "expected_answer": "جامعة متكاملة مفتوحة لجميع الطلاب تقدم تعليماً تقنياً حديثاً", "category": "general"},
+    {"question": "كيف أسجل كطالب جديد؟", "expected_answer": "عبر reg.ust.edu.sd", "category": "registration"},
+    {"question": "ما هي الشهادات التي تمنحها الجامعة؟", "expected_answer": "بكالوريوس الشرف، بكالوريوس عام، دبلوم، شهادة", "category": "academic"},
+    {"question": "كم سنة بكالوريوس الشرف؟", "expected_answer": "خمس سنوات أكاديمية", "category": "academic"},
+    {"question": "ما هو بريد الجامعة؟", "expected_answer": "info@ust.edu.sd", "category": "contact"},
+    {"question": "What faculties does UST have?", "expected_answer": "Medicine, Dentistry, Pharmacy, Medical Lab, Nursing, Engineering, CS&IT, Administrative", "category": "faculties"},
+    {"question": "How can I apply as a new student?", "expected_answer": "Through reg.ust.edu.sd", "category": "registration"},
+    {"question": "What are the graduation requirements?", "expected_answer": "Determined by each faculty with Scientific Council approval", "category": "academic"},
+    {"question": "أين يقع قسم الرسوم الدراسية؟", "expected_answer": "الجزء الشرقي من مجمع الهندسة والتقنية - الثورة - شارع الشنقيطي", "category": "fees"},
+    {"question": "ما هي المراكز في الجامعة؟", "expected_answer": "مركز أبحاث طبية، سرطان عنق الرحم، تعليم عن بعد، البيريري الثقافي، ريادة الأعمال، علوم البيانات، اللغات", "category": "centers"},
+    {"question": "هل يوجد فرع للجامعة في السعودية؟", "expected_answer": "نعم، مركز تدريب التقنية، حي النسيم، الرياض", "category": "locations"},
+    {"question": "ما هو رابط بوابة الجامعة؟", "expected_answer": "portal.ust.edu.sd", "category": "links"},
+    {"question": "كيف أتواصل مع شؤون الطلاب؟", "expected_answer": "عمادة شؤون الطلاب", "category": "contact"},
+    {"question": "ما نظام الدراسة في الجامعة؟", "expected_answer": "فصلي أو سنوي أو هجين حسب الكلية بموافقة المجلس العلمي", "category": "academic"},
+    {"question": "هل يوجد تعليم إلكتروني؟", "expected_answer": "نعم عبر portal.ust.edu.sd", "category": "services"},
+    {"question": "كيف أحول من جامعة أخرى؟", "expected_answer": "عبر رابط التحويل الخارجي reg.ust.edu.sd/ust/online/transfer", "category": "registration"}
+]

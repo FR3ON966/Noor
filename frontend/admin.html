@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | نظام UST الذكي</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/admin.css?v=4">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="login-screen" id="loginScreen">
+    <div class="login-box">
+        <div class="logo-box" style="margin-bottom: 20px; display: flex; justify-content: center;">
+            <span class="logo-icon">UST</span>
+        </div>
+        <h2 style="text-align: center; margin-bottom: 20px;">تسجيل الدخول - لوحة التحكم</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label>اسم المستخدم</label>
+                <input type="text" id="loginUsername" required dir="ltr" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>كلمة المرور</label>
+                <input type="password" id="loginPassword" required dir="ltr" class="form-control">
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; font-size: 1.1rem; margin-top: 10px;">دخول</button>
+        </form>
+        <div id="loginError" style="color: #ef4444; margin-top: 15px; text-align: center; display: none;">بيانات الدخول غير صحيحة</div>
+    </div>
+</div>
+
+<div class="app-container" id="appContainer" style="display: none;">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-box">
+                <span class="logo-icon">UST</span>
+            </div>
+            <h2>لوحة التحكم</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <span class="nav-icon">🏠</span> <span class="nav-text">الرئيسية</span>
+            </a>
+            <div class="nav-group">البيانات الأكاديمية</div>
+            <a href="#knowledge" class="nav-item" data-section="knowledge">
+                <span class="nav-icon">📚</span> <span class="nav-text">قاعدة المعرفة</span>
+            </a>
+            <a href="#faculties" class="nav-item" data-section="faculties">
+                <span class="nav-icon">🏛️</span> <span class="nav-text">الكليات والأقسام</span>
+            </a>
+            <a href="#programs" class="nav-item" data-section="programs">
+                <span class="nav-icon">📖</span> <span class="nav-text">البرامج الدراسية</span>
+            </a>
+            <a href="#courses" class="nav-item" data-section="courses">
+                <span class="nav-icon">📔</span> <span class="nav-text">المقررات</span>
+            </a>
+            
+            <div class="nav-group">المالية واللوائح</div>
+            <a href="#fees" class="nav-item" data-section="fees">
+                <span class="nav-icon">💰</span> <span class="nav-text">الرسوم الدراسية</span>
+            </a>
+            <a href="#payment-plans" class="nav-item" data-section="payment-plans">
+                <span class="nav-icon">💳</span> <span class="nav-text">خطط الدفع</span>
+            </a>
+            <a href="#scholarships" class="nav-item" data-section="scholarships">
+                <span class="nav-icon">🎓</span> <span class="nav-text">المنح الدراسية</span>
+            </a>
+            <a href="#regulations" class="nav-item" data-section="regulations">
+                <span class="nav-icon">📋</span> <span class="nav-text">اللوائح الأكاديمية</span>
+            </a>
+            <a href="#grading" class="nav-item" data-section="grading">
+                <span class="nav-icon">📊</span> <span class="nav-text">نظام الدرجات</span>
+            </a>
+            
+            <div class="nav-group">الجامعة والطلاب</div>
+            <a href="#calendar" class="nav-item" data-section="calendar">
+                <span class="nav-icon">📅</span> <span class="nav-text">التقويم الأكاديمي</span>
+            </a>
+            <a href="#staff" class="nav-item" data-section="staff">
+                <span class="nav-icon">👨‍🏫</span> <span class="nav-text">هيئة التدريس</span>
+            </a>
+            <a href="#services" class="nav-item" data-section="services">
+                <span class="nav-icon">🏨</span> <span class="nav-text">خدمات الطلاب</span>
+            </a>
+            <a href="#faqs" class="nav-item" data-section="faqs">
+                <span class="nav-icon">❓</span> <span class="nav-text">الأسئلة الشائعة</span>
+            </a>
+            <a href="#announcements" class="nav-item" data-section="announcements">
+                <span class="nav-icon">📢</span> <span class="nav-text">الإعلانات</span>
+            </a>
+            
+            <div class="nav-group">النظام</div>
+            <a href="#documents" class="nav-item" data-section="documents">
+                <span class="nav-icon">📄</span> <span class="nav-text">الوثائق والملفات</span>
+            </a>
+            <a href="#conversations" class="nav-item" data-section="conversations">
+                <span class="nav-icon">💬</span> <span class="nav-text">سجل المحادثات</span>
+            </a>
+            <a href="#feedback" class="nav-item" data-section="feedback">
+                <span class="nav-icon">⭐</span> <span class="nav-text">مراجعة التقييمات</span>
+            </a>
+            <a href="#system" class="nav-item" data-section="system">
+                <span class="nav-icon">🔧</span> <span class="nav-text">حالة النظام</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div class="topbar-right">
+                <div class="user-profile">
+                    <span class="avatar">👨‍💻</span>
+                    <span class="user-name">مدير النظام</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="content-area" id="mainContent">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </main>
+
+</div>
+
+<!-- Modal Dialog -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <h3 id="modalTitle">إضافة جديد</h3>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Dynamic form injected here -->
+        </div>
+        <div class="modal-footer">
+            <button class="btn-cancel" onclick="closeModal()">إلغاء</button>
+            <button class="btn-primary" id="modalSaveBtn">حفظ</button>
+        </div>
+    </div>
+</div>
+
+<!-- Confirm Dialog -->
+<div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-dialog" id="confirmDialog">
+        <h3 class="confirm-title">تأكيد الإجراء</h3>
+        <p id="confirmText">هل أنت متأكد من هذا الإجراء؟</p>
+        <div class="confirm-actions">
+            <button class="btn-cancel" onclick="closeConfirm()">إلغاء</button>
+            <button class="btn-danger" id="confirmBtn">نعم، متأكد</button>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notifications Container -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- Core Scripts -->
+<script src="/static/admin.js?v=4"></script>
+
+</body>
+</html>
