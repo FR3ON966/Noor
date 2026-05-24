@@ -6,8 +6,9 @@ python-multipart==0.0.20
 # AI & NLP
 langchain==0.3.14
 langchain-community==0.3.14
+langchain-google-genai
 chromadb==0.5.23
-sentence-transformers==3.3.1
+# sentence-transformers removed to save memory on server
 
 # LLM Providers
 ollama==0.4.5

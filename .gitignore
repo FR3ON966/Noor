@@ -17,9 +17,11 @@ venv.bak/
 *.sqlite3
 chatbot.db
 
-# Vector Store / FAISS
+# Vector Store / FAISS / Chroma
 vector_store/
 vector_db/
+chroma_db/
+
 
 # IDE
 .vscode/
