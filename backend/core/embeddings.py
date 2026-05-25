@@ -26,9 +26,9 @@ class EmbeddingManager:
     def __init__(self):
         if self._model is None:
             logger.info("Loading Google Gemini embedding model")
-            # We use text-embedding-004 which is extremely fast and free
+            # We use models/gemini-embedding-2 which is fully supported
             self._model = GoogleGenerativeAIEmbeddings(
-                model="models/text-embedding-004",
+                model="models/gemini-embedding-2",
                 google_api_key=os.environ.get("GOOGLE_API_KEY")
             )
             logger.info("Embedding model loaded successfully")
